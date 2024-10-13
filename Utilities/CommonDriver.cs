@@ -18,6 +18,14 @@ namespace QAMars.Utilities
             driver.Manage().Window.Maximize();
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
         }
+        public void CloseBrowser()
+        {
+            if (driver != null)
+            {
+                driver.Quit();
+                driver = null;
+            }
+        }
         
+        }
     }
-}
