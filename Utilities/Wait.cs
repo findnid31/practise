@@ -1,4 +1,5 @@
 ﻿using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Support.UI;
 using System;
 using System.Collections.Generic;
@@ -26,10 +27,10 @@ namespace QAMars.Utilities
             }
 
         }
-
+               
         public static void WaitToBeVisible(IWebDriver driver, string locatorType, string locatorValue, int seconds)
         {
-            var wait = new WebDriverWait(driver, new TimeSpan(0, 0, seconds));
+            var wait = new WebDriverWait(driver, new TimeSpan(0,0,seconds));
 
             if (locatorType == "Xpath")
             {
